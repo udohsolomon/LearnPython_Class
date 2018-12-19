@@ -1,8 +1,9 @@
 
-'''Some functions written to demonstrate a bunch of concepts like modules, 
+"""
+Some functions written to demonstrate a bunch of concepts like modules, 
 import, and command-line programming.
 
-'''
+"""
 
 def numop(x, y, multiplier = 1.0, greetings = 'Thank you for your inquiry.'):
     
