@@ -8,7 +8,7 @@ import, and command-line programming.
 import os
 import sys
 
-def getinfo(path = ' . ', show_version = True):
+def getinfo(path = '.', show_version = True):
     '''
     Purpose: make simple use of os and sys modules
     Input: path (default = "."), the directory you want to list
@@ -21,7 +21,7 @@ def getinfo(path = ' . ', show_version = True):
         print(sys.version)
         print('-' * 90)
         
-    print('File in the directory' + str(os.path.abspath(path)) + ":")
+    print('File in the directory ' + str(os.path.abspath(path)) + " :")
     for f in os.listdir(path):
         print(' ' + f)
         
@@ -47,5 +47,5 @@ if __name__ == '__main__':
                     
                     getinfo(dir, show_version = (i==1))
                 else:
-                    print('Directory' + str(dir) + 'does not exit')
-                    print(' - ' * 90)
+                    print('Directory ' + str(dir) + ' does not exit')
+                    print('-' * 90)
