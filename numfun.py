@@ -1,5 +1,5 @@
 """
-small demo of modules for class
+small demo of modules
 """
 
 def numop(x, y, multiplier = 1.0, greetings = "Thank you for your inquiry."):
