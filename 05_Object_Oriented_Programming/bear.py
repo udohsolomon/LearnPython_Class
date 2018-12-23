@@ -6,7 +6,7 @@ class Bear:
     def __init__(self, name):
         self.name = name
         print('Made a bear called %s' %(name))
-        self.logfile = open(bear.logfile_name, 'a')
+        self.logfile = open(Bear.logfile_name, 'a')
         Bear.bear_num += 1
         self.my_num = Bear.bear_num
         self.logfile.write('[%s] created bear #%i named %s\n' %
@@ -18,7 +18,7 @@ class Bear:
         
     def __del__(self):
         print('Bang! %s is no longer' % self.name)
-        self.logfile.write('[%s] deleted bear #%i named %s\n' % 
+        self.logfile.write('[%s] deleted bear #%i named %s\n' % \
                           datetime.datetime.now(), self.my_num, self.name)
         self.logfile.flush()
         #Decrease the number of bears in the population
@@ -26,5 +26,5 @@ class Bear:
         self.logfile.close()
         
     def __str__(self):
-        return 'Name = %s bear number = %i (population %i)' %
+        return 'Name = %s bear number = %i (population %i)' % \
                 (self.name, self.my_num, Bear.bear_num)
