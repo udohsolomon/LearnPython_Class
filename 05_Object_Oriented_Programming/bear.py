@@ -19,7 +19,7 @@ class Bear:
     def __del__(self):
         print('Bang! %s is no longer' % self.name)
         self.logfile.write('[%s] deleted bear #%i named %s\n' % \
-                          datetime.datetime.now(), self.my_num, self.name)
+                          (datetime.datetime.now(), self.my_num, self.name))
         self.logfile.flush()
         #Decrease the number of bears in the population
         Bear.bear_num -= 1
