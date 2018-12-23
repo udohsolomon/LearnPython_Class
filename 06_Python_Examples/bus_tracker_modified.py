@@ -1,18 +1,20 @@
-# This python code track the next bus to catch
-import sys
-import urllib.request
+#!/usr/bin/env python3
 
-if len(sys.argv != 3):
+# This python code tracks the next bus to catch
+import sys
+
+if len(sys.argv) != 3:
     raise SystemExit('Usage: bus_tracker_modified.py route stopid')
 
 route = sys.argv[1]
 stopid = sys.argv[2]
 
-print('Command options', sys.argv)
-raise SystemExit(0)
+# print('Command options', sys.argv)
+# raise SystemExit(0)
+import urllib.request
 
-u  = urllib.request.urlopen('http://ctabustracker.com/bustime/map/getStopPredictions.jsp?route={}&stop={}',format(\
-route, stopid))
+
+u  = urllib.request.urlopen('http://ctabustracker.com/bustime/map/getStopPredictions.jsp?route={}&stopid={}'.format(route, stopid))
 data = u.read()
 
 from xml.etree.ElementTree import XML
