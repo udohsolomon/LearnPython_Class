@@ -14,11 +14,19 @@ stopid = sys.argv[2]
 import urllib.request
 
 
-u  = urllib.request.urlopen('http://ctabustracker.com/bustime/map/getStopPredictions.jsp?route={}&stop={}'.format(route, stopid))
+u  = urllib.request.urlopen('http://ctabustracker.com/bustime/map/getStopPrediction.jsp?route={}&stop={}'.format(route, stopid))
+
+#import pdb; pdb.set_trace() #Launch debugger
 data = u.read()
+
+#print('Response:', data) # Use print statement for debugging
 
 from xml.etree.ElementTree import XML
 doc = XML(data)
 
 for pt in doc.findall('.//pt'):
     print(pt.text)
+
+#python3 -i bus_tracker_debug.py
+#import pdb 
+#pdb.pm()
