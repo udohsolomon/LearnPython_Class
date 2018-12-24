@@ -17,7 +17,7 @@ def read_portfolio(filename, *, errors = 'warn'):
     if errors not in {'warn', 'silent', 'raise'}:
         raise ValueError("Errors must be one of 'warn', 'silent', 'raise'")
 
-    total = 0.0
+    portfolio = []
 
     with open(filename, 'r') as f:
         rows = csv.reader(f)
@@ -37,9 +37,21 @@ def read_portfolio(filename, *, errors = 'warn'):
                     pass        #Ignore
 
                 continue        #skip to the next row
+            # record = tuple(row)
+            record = {
+                'name': row[0],
+                'date': row[1],
+                'shares': row[2],
+                'price': row[3]
+            }
+            portfolio.append(record)
+           
+    return portfolio
+portfolio = read_portfolio('../data/portfolio.csv')
+total = 0.0
+#for name, date, shares, price in portfolio:
+#    total += shares * price   # Share * price
+for holding in portfolio:
+    total += holding['shares'] * holding['price']
 
-            total += row[2] * row[3]
-
-    return total
-total = portfolio_cost('../data/missing.csv', errors = 'silent')
 print('Total cost:', total)
