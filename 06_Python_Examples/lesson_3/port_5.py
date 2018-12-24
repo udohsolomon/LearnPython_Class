@@ -6,12 +6,16 @@ Handling bad data and exceptions
 
 import csv
 
-def portfolio_cost(filename):
+def portfolio_cost(filename, *, errors = 'warn'):
 
     '''
     Computes total shares * price for a csv file with name, date, shares, price data
 
     '''
+    # defensive positions in function definitions
+
+    if errors not in {'warn', 'silent', 'raise'}:
+        raise ValueError("Errors must be one of 'warn', 'silent', 'raise'")
 
     total = 0.0
 
@@ -24,13 +28,18 @@ def portfolio_cost(filename):
                 row[2] = int(row[2])
                 row[3] = float(row[3])
             except ValueError as err:
-                print('Row:', rownum, 'Bad row', row)
-                print('Row:', rownum, 'Reason:', err)
+                if errors == 'warn':
+                    print('Row:', rownum, 'Bad row', row) 
+                    print('Row:', rownum, 'Reason:', err)
+                elif errors == 'raise':
+                    raise       #reraises the last exception
+                else:
+                    pass        #Ignore
 
-                continue    #skip to the next row
+                continue        #skip to the next row
 
             total += row[2] * row[3]
 
     return total
-total = portfolio_cost('../data/missing.csv')
+total = portfolio_cost('../data/missing.csv', errors = 'silent')
 print('Total cost:', total)
