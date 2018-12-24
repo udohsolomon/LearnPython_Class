@@ -19,9 +19,7 @@ def portfolio_cost(filename):
         rows = csv.reader(f)
         headers = next(rows)  #skip a single line of input
 
-        rownum = 0
         for rownum, row in enumerate(rows, start = 1):
-            rownum += 1
             try:
                 row[2] = int(row[2])
                 row[3] = float(row[3])
