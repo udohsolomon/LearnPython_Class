@@ -28,7 +28,7 @@ def read_csv(filename, types, *, errors = 'warn'):
                 elif errors == 'raise':
                     raise       #reraises the last exception
                 else:
-                    pass        #Ignore
+                    pass        #ignore
 
                 continue        #skip to the next row
             record = dict(zip(headers, row))
