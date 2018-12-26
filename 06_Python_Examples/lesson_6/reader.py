@@ -5,6 +5,7 @@ import csv
 def read_csv(filename, types, *, errors = 'warn'):
     '''
     Read a CSV file with type conversion into a list of dicts
+    to generalize things instead of hardwired we did in the previous section
     '''
     # defensive positions in function definitions
 
