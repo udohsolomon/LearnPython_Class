@@ -26,7 +26,7 @@ def print_table(objects, colnames, formatter):
         formatter.row(rowdata)
 
 class TableFormatter(object):
-    #  a design spec for making tables (use inheritance to customize)
+    # Serves a design spec for making tables (use inheritance to customize)
     def headings(self, headers):
         raise NotImplementedError
 
