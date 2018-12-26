@@ -40,8 +40,11 @@ class Holding(object):
 # h.sell(10)
 # h.shares
 
-#There are majorly three things one can do with python object
+# There are majorly three things one can do with python object
 #although it does has some consequences like `spelling errors` etc
+# Another interesting thing about object is that methods are layered on the 
+# get-set-del 
+
 # 1. Get an attribute h.name
 # 2. Set an attribute  h.shares = 75
 # 3. Delete an attribute del h.shares
