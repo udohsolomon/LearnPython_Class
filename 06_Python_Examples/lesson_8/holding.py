@@ -19,7 +19,8 @@ class Holding(object):
     def sell(self, nshares):
         self.shares -= nshares
 
-    def read_csv(self, filename):
+    def read_portfolio(filename):
+
         portfolio = []
         with open(filename, 'r') as f:
             rows = csv.reader(f)
