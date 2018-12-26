@@ -1,4 +1,6 @@
 
+import csv
+
 class Holding(object): 
     '''
     A collection of functions and the functions actually serve as methods
@@ -17,6 +19,18 @@ class Holding(object):
     def sell(self, nshares):
         self.shares -= nshares
 
+    def read_csv(self, filename):
+        portfolio = []
+        with open(filename, 'r') as f:
+            rows = csv.reader(f)
+            headers = next(rows)
+            for row in rows:
+                h = Holding(row[0], row[1], int(row[2]), float(row[3]))
+                portfolio.append(h)
+        return portfolio
+
+
+
 
 # h = Holding('AA', '2012-12-26', 100, 34)
 # h.name
@@ -25,3 +39,9 @@ class Holding(object):
 # h.cost()
 # h.sell(10)
 # h.shares
+
+#There are majorly three things one can do with python object
+#although it does has some consequences like `spelling errors` etc
+# 1. Get an attribute h.name
+# 2. Set an attribute  h.shares = 75
+# 3. Delete an attribute del h.shares
