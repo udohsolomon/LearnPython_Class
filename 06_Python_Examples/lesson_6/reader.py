@@ -4,8 +4,8 @@ import csv
 
 def read_csv(filename, types, *, errors = 'warn'):
     '''
-    Read a CSV file with type conversion into a list of dicts
-    to generalize things instead of hardwired we did in the previous section
+    Read a CSV file with type conversion into a list of dicts as a basis for 
+    writing a more general library.
     '''
     # defensive positions in function definitions
 
@@ -20,7 +20,12 @@ def read_csv(filename, types, *, errors = 'warn'):
 
         for rownum, row in enumerate(rows, start = 1):
             try:
-                row = [ func(val) for func, val in zip(types, row)]
+                row = [ func(val) for func, val in zip(types, row)] 
+                '''
+                   A row of data where the types have been converted
+                   after pairing up a type conversion with a value 
+                   using the zip function
+                '''
                 
             except ValueError as err:
                 if errors == 'warn':
@@ -32,6 +37,6 @@ def read_csv(filename, types, *, errors = 'warn'):
                     pass        #ignore
 
                 continue        #skip to the next row
-            record = dict(zip(headers, row))
+            record = dict(zip(headers, row)) #A dictionary of converted value
             records.append(record)
     return records
