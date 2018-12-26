@@ -44,6 +44,8 @@ class Holding(object):
 #although it does has some consequences like `spelling errors` etc
 # Another interesting thing about object is that methods are layered on the 
 # get-set-del 
+# The getattr and setattr functions open up a possibility of creating
+# pretty generic piece of code 
 
 # 1. Get an attribute h.name
 # 2. Set an attribute  h.shares = 75
