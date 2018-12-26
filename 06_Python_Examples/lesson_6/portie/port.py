@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import reader # make sure import module is in thesame directory with the current one
+from . import reader # make sure import module is in thesame directory with the current one
 
 def read_portfolio(filename, *, errors = 'warn'):
 
