@@ -17,4 +17,11 @@ class Holding(object):
     def sell(self, nshares):
         self.shares -= nshares
 
-        
+
+# h = Holding('AA', '2012-12-26', 100, 34)
+# h.name
+# h.date
+# h.shares
+# h.cost()
+# h.sell(10)
+# h.shares
