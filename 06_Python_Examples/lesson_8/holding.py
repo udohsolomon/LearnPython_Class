@@ -19,7 +19,7 @@ class Holding(object):
     def sell(self, nshares):
         self.shares -= nshares
 
-    def read_portfolio(filename):
+    def read_portfolio(self, filename):
 
         portfolio = []
         with open(filename, 'r') as f:
