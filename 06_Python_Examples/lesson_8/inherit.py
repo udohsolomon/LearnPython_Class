@@ -24,3 +24,6 @@ class D(Parent):
 
 class E(A, B, C, D):
     pass
+
+class F(D, C, B, A):
+    pass
