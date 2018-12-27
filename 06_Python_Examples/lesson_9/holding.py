@@ -37,3 +37,4 @@ if __name__ == '__main__':
 
 # h = Holding('AA', '2018-12-27', 100, 32)
 # h
+# portfolio
