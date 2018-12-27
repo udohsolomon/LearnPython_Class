@@ -65,4 +65,5 @@ class HTMLTableFormatter(TableFormatter):
         print('</tr>')
 
 # import table
+# formatter = table.TextTableFormatter()
 # table.print_table(portfolio, ['name', 'shares', 'price'], formatter)
