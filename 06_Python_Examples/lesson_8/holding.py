@@ -19,7 +19,7 @@ class Holding(object):
     def sell(self, nshares):
         self.shares -= nshares
 
-    def read_portfolio(self, filename):
+    def read_portfolio(filename):
 
         portfolio = []
         with open(filename, 'r') as f:
@@ -51,3 +51,7 @@ class Holding(object):
 # 1. Get an attribute h.name
 # 2. Set an attribute  h.shares = 75
 # 3. Delete an attribute del h.shares
+
+# portfolio = Holding.read_portfolio('../data/portfolio.csv')
+# portfolio
+# table.print_table(portfolio, ['name', 'price', 'shares'])
