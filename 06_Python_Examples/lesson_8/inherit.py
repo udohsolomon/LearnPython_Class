@@ -7,7 +7,7 @@ class A(Parent):
         print('A.spam')
         super().spam()
 
-class B(A):
+class B(Parent):
     def spam(self):
         print('B.spam')
         super().spam()
