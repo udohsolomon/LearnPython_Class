@@ -1,5 +1,5 @@
 import urllib.request
-import os
+import io
 
 def get_robots(url):
     if url.endswith('/'):
