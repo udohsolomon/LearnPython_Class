@@ -10,10 +10,10 @@ create_dir(ROOT_DIR)
 
 def gather_info(name, url):
     domain_name = get_domain_name(url)
-    ip_address = get_ip_address(url)
-    nmap       = get_nmap('-A', ip_address)
-    robots     = get_robots(url)
-    whois      = get_whois(domain_name)
+    ip_address  = get_ip_address(url)
+    nmap        = get_nmap('-A', ip_address)
+    robots      = get_robots(url)
+    whois       = get_whois(domain_name)
     create_report(name, url, domain_name, nmap, robots, whois)
 
 def create_report(name, full_url, domain_name, nmap, robots, whois):
