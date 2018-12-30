@@ -25,4 +25,4 @@ def create_report(name, full_url, domain_name, nmap, robots, whois):
     write_file(project_dir + '/robots_txt', robots)
     write_file(project_dir + '/whois', + whois)
 
-gather_info('Coventry Uni', 'https://www.coventry.ac.uk/')
+gather_info('Coventry', 'https://www.coventry.ac.uk/')
