@@ -7,3 +7,4 @@ def get_ip_address(url):
     marker = results.find('has address') + 12
     return results[marker:].splitlines()[0]
 
+# print(get_ip_address('rgu.ac.uk'))
