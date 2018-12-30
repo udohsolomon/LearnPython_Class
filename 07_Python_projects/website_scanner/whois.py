@@ -6,3 +6,4 @@ def get_whois(url):
     results = str(process.read())
     return results
 
+# print(get_whois('augeosai.com'))
