@@ -6,4 +6,4 @@ def get_nmap(option, ip):
     results = str(process.read())
     return results
 
-print(get_nmap('-A', 'www.augeosai.com'))
+# print(get_nmap('-A', 'www.augeosai.com'))
