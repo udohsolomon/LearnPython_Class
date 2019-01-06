@@ -1,5 +1,4 @@
 #!/bin/bash
-#update daily every 2 hours
 #Author: Solomon Amos
 
 cd ~/projects/LearnPython_Class
