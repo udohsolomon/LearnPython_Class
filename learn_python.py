@@ -16,6 +16,7 @@
 3  # => 3
 
 # Math is what you would expect
+# Calculator
 1 + 1   # => 2
 8 - 1   # => 7
 10 * 2  # => 20
