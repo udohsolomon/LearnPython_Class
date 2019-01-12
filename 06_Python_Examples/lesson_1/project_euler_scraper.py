@@ -16,8 +16,8 @@ LAST_PROB = 640
 URL_ROOT = 'http://projecteuler.net/problem={}'
 THREADS = 13
 
-out_path = sys.argv[1:]
-language = sys.argv[1:]
+out_path, language = sys.argv[1:]
+
 
 # out_path = 'tst'
 # language = 'javascript'
