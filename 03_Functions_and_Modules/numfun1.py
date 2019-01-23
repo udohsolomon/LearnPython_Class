@@ -5,7 +5,7 @@ small demo of modules
 ## do some stuff and set some variables
 print("numfun1 in the house")
 x    = 2
-s    = "spamm"
+s    = "spam"
 
 def numop(x, y, multiplier = 1.0, greetings = "Thank you for your inquiry."):
     """ 
