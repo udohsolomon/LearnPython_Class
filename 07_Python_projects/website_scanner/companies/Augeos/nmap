@@ -1,0 +1,72 @@
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2019-02-11 17:08 GMT
+Stats: 0:02:37 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 91.67% done; ETC: 17:11 (0:00:06 remaining)
+Stats: 0:02:42 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 91.67% done; ETC: 17:11 (0:00:07 remaining)
+Stats: 0:03:46 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 91.67% done; ETC: 17:12 (0:00:13 remaining)
+Nmap scan report for augeosai.com (198.54.116.239)
+Host is up (0.20s latency).
+rDNS record for 198.54.116.239: server227-5.web-hosting.com
+Not shown: 988 filtered ports
+PORT     STATE SERVICE        VERSION
+21/tcp   open  ftp            Pure-FTPd
+| ssl-cert: Subject: commonName=*.web-hosting.com
+| Not valid before: 2018-02-06T00:00:00
+|_Not valid after:  2020-04-04T23:59:59
+|_ssl-date: 2019-02-11T17:12:56+00:00; 0s from scanner time.
+25/tcp   open  smtp?
+|_smtp-commands: Couldn't establish connection on port 25
+26/tcp   open  smtp           Exim smtpd 4.91
+|_smtp-commands: Couldn't establish connection on port 26
+53/tcp   open  domain
+| dns-nsid: 
+|_  bind.version: 9.8.2rc1-RedHat-9.8.2-0.68.rc1.el6_10.1
+80/tcp   open  http-proxy     HAProxy http proxy
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache
+|_http-title: Did not follow redirect to https://augeosai.com/
+110/tcp  open  pop3           Dovecot pop3d
+|_pop3-capabilities: PIPELINING SASL(PLAIN LOGIN) AUTH-RESP-CODE RESP-CODES TOP USER UIDL STLS CAPA
+| ssl-cert: Subject: commonName=www.augeosai.com
+| Not valid before: 2018-12-31T00:00:00
+|_Not valid after:  2019-12-31T23:59:59
+|_ssl-date: 2019-02-11T17:12:52+00:00; -1s from scanner time.
+143/tcp  open  imap           Dovecot imapd
+|_imap-capabilities: have NAMESPACE OK Pre-login capabilities LITERAL+ AUTH=PLAIN STARTTLS post-login listed IDLE more AUTH=LOGINA0001 ENABLE ID LOGIN-REFERRALS IMAP4rev1 SASL-IR
+| ssl-cert: Subject: commonName=www.augeosai.com
+| Not valid before: 2018-12-31T00:00:00
+|_Not valid after:  2019-12-31T23:59:59
+|_ssl-date: 2019-02-11T17:12:52+00:00; 0s from scanner time.
+443/tcp  open  ssl/http-proxy HAProxy http proxy
+|_http-server-header: Apache
+|_http-title: Augeos AI &mdash; Build Intelligent Energy Solutions
+| ssl-cert: Subject: commonName=www.augeosai.com
+| Not valid before: 2018-12-31T00:00:00
+|_Not valid after:  2019-12-31T23:59:59
+|_ssl-date: TLS randomness does not represent time
+587/tcp  open  smtp           Exim smtpd 4.91
+|_smtp-commands: Couldn't establish connection on port 587
+993/tcp  open  ssl/imap       Dovecot imapd
+|_imap-capabilities: have NAMESPACE OK Pre-login capabilities LITERAL+ AUTH=PLAIN SASL-IR post-login listed IDLE more IMAP4rev1 ENABLE ID AUTH=LOGINA0001 LOGIN-REFERRALS
+| ssl-cert: Subject: commonName=www.augeosai.com
+| Not valid before: 2018-12-31T00:00:00
+|_Not valid after:  2019-12-31T23:59:59
+|_ssl-date: 2019-02-11T17:12:54+00:00; 0s from scanner time.
+995/tcp  open  ssl/pop3       Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN LOGIN) UIDL RESP-CODES TOP USER AUTH-RESP-CODE PIPELINING CAPA
+| ssl-cert: Subject: commonName=www.augeosai.com
+| Not valid before: 2018-12-31T00:00:00
+|_Not valid after:  2019-12-31T23:59:59
+|_ssl-date: 2019-02-11T17:12:53+00:00; 0s from scanner time.
+5666/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.01%I=7%D=2/11%Time=5C61AC8C%P=x86_64-pc-linux-gnu%r(DNSV
+SF:ersionBindReq,62,"\0`\0\x06\x85\0\0\x01\0\x01\0\x01\0\0\x07version\x04b
+SF:ind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\('9\.8\.2rc1-RedHat-9\.
+SF:8\.2-0\.68\.rc1\.el6_10\.1\xc0\x0c\0\x02\0\x03\0\0\0\0\0\x02\xc0\x0c");
+Service Info: Host: server227.web-hosting.com; Device: load balancer
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 268.63 seconds

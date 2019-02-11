@@ -11,5 +11,5 @@ def get_robots(url):
     data = io.TextIOWrapper(req, encoding = 'utf-8')
     return data.read()
 
-# print(get_robots('https://www.coventry.ac.uk/'))
+# print(get_robots('https://www.augeosai.com'))
 
