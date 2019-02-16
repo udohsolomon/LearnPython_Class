@@ -35,4 +35,4 @@ def print_matrix(matrix):
     for row in matrix:
         print(" ".join("_"*width if el is None else fmt.format(el) for el in row))
 
-print(print_matrix(spiral(20, 20)))
+print(print_matrix(spiral(50, 50))
